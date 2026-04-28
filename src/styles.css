@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.hero {
+  height: 300px;
+  background: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

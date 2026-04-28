@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4c69b;
+  padding: 10px 20px;
+  color: white;
+}
+
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+color: #ff7a00;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+}
+
+.logo {
+  height: 150px;
+  width: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.footer-section {
+  position: relative;
+}
+
+/* Dropdown list */
+.footer-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+
+  /* Hide smoothly */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+
+  z-index: 1000; /* IMPORTANT */
+}
+
+/* Show on hover */
+.footer-section:hover .footer-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
