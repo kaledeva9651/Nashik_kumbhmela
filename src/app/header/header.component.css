@@ -75,3 +75,53 @@ nav a.active {
   visibility: visible;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .col-md-9 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .footer-section h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  /* Hide by default on mobile */
+  .footer-list {
+    position: static;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Show when clicked (focus) */
+  .footer-section:focus-within .footer-list,
+  .footer-section:active .footer-list {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    padding-top: 10px;
+  }
+
+  .footer-list li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
